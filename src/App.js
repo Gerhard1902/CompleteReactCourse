@@ -8,16 +8,21 @@ class App extends Component {
     {name:"Max", age:28},
     {name:"Manu", age:29},
     {name:"steph", age:26}
-    ]
+    ],
+    otherState:"some other value";
   } 
 switchNameHandler =()=>{
   //console.log("Was clicked");
   //Don´t do this -> this.state.persons[0].name="Maximilian";// si no es arrow no va a referir a la clase
-  this.setState({persons:[
+  // No funcionó porque no puedes mutar
+  //sólo funcionó por flecha gorda y lo del this
+  this.setState({
+    persons:[
     {name:"Maximilian", age:28},
     {name:"Manu", age:29},
     {name:"steph", age:27}
-    ]})
+    ]
+  })
 }
 
   render() {
